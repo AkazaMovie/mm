@@ -1,0 +1,33 @@
+/* Base button style */
+button {
+    background-color: #007BFF; /* Blue background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 12px 24px; /* Padding around the text */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3); /* Subtle shadow */
+}
+
+/* Hover effect */
+button:hover {
+    background-color: #0056b3; /* Darker blue when hovered */
+    transform: scale(1.05); /* Slightly grow the button */
+    box-shadow: 0 8px 16px rgba(0, 123, 255, 0.4); /* Stronger shadow */
+}
+
+/* Active state (when clicked) */
+button:active {
+    background-color: #aab7c3; /* Even darker blue */
+    transform: scale(0.98); /* Slight shrink effect when clicked */
+    box-shadow: 0 2px 6px rgba(238, 239, 240, 0.2); /* Reduced shadow */
+}
+.dark-mode{
+ background-color: #303030;
+}
+
+.mvText{
+}

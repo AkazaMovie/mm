@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Background with Button</title>
+    <link rel="stylesheet" href="./link.css">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            background: url('your-image-url.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-container {
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(191, 222, 169, 0.5); /* semi-transparent background */
+            
+        }
+
+        .button-container h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            background-color: #FF5722;
+            color: white;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            text-decoration: none; /* remove underline */
+        }
+
+        /* Existing cta-button styles + rainbow effect */
+.cta-button.rainbow {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    background: linear-gradient(270deg, black, orange, rgb(194, 194, 133), rgb(140, 225, 140), rgb(91, 91, 176), rgb(142, 107, 167), violet, red);
+    background-size: 1400% 1400%;
+    animation: rainbow 6s ease infinite;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
+}
+
+h1{
+ color: #333;
+ user-select: none;
+}
+
+.cta-button.rainbow:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        button#toggle-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: #FF5722;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button#toggle-button:hover {
+            background-color: #FF3D00;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggle-button">Dark Mode</button>
+    
+    <div class="button-container">
+        <h1>လင့်ကိုသွားရန်နှိပ်ပါ</h1>
+        <a class="cta-button rainbow" href="https://t.me/mya19ssyy/93" target="_blank">Channel Link</a>
+        <div class="mvText">
+            <a href="https://t.me/weaponsmmsub/3">Weapons 2025</a>
+            <a href="https://t.me/akazaMovie/8">Together 2025</a>
+            
+        </div>
+        
+        
+        
+
+    </div>
+    
+
+    <script>
+        const toggleButton = document.getElementById("toggle-button");
+
+        toggleButton.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+
+            toggleButton.textContent = document.body.classList.contains("dark-mode") 
+                ? "Light Mode" 
+                : "Dark Mode";
+        });
+    </script>
+
+    <script src="./link.js"></script>
+</body>
+</html>
